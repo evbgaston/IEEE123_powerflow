@@ -3,7 +3,7 @@ version: 2.1
 jobs: 
   build:
     docker: 
-      - image: gridlabd/slac-master:dev
+      - image: gridlabd/slac-master:latest
     steps: 
       - checkout 
       - run: 
@@ -16,3 +16,4 @@ jobs:
           command: |
             gridlabd --version
             echo "Model finished"
+            git clone https://github.com/dchassin/gridlabd.git
