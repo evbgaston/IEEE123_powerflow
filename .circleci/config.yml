@@ -11,7 +11,6 @@ jobs:
           command: |
             yum -y install centos-release-scl
             yum -y install rh-python36
-            scl enable rh-python36
             python --version
       - run: 
           name: Run version check
