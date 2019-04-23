@@ -17,4 +17,4 @@ jobs:
             gridlabd --version
             echo "Model finished"
             git clone https://github.com/dchassin/gridlabd.git
-            mv -f local.glm gridlabd/models/ieee123/config/
+            mv -f config/local.glm gridlabd/models/ieee123/config/
