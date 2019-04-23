@@ -9,8 +9,11 @@ jobs:
       - run: 
           name: Python install 
           command: |
-            yum -y install centos-release-scl
-            yum -y install rh-python36
+            yum update
+            yum install yum-utils
+            yum -y install https://centos7.iuscommunity.org/ius-release.rpm
+            yum -y install python36u
+            yum -y install python36u-pip
             python --version
       - run: 
           name: Run version check
