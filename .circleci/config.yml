@@ -7,9 +7,15 @@ jobs:
     steps: 
       - checkout 
       - run: 
+          name: Python install 
+          command: |
+            yum install centos-release-scl
+            yum install rh-python36
+            scl enable rh-python36 bash
+            python --version
+      - run: 
           name: Run version check
           command: |
-            pyenv install 3.6
             gridlabd --version
             gridlabd --origin
       - run:
