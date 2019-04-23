@@ -7,20 +7,11 @@ jobs:
     steps: 
       - checkout 
       - run: 
-          name: Make sure Python 3.6 is properly setup
-          command: |
-            sudo apt-get install software-properties-common python-software-properties --yes
-            sudo add-apt-repository -y ppa:deadsnakes/ppa
-            sudo apt update
-            sudo apt-get install python3-dev
-            sudo apt install python3.6            
-            sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
-            sudo update-alternatives --set python /usr/bin/python3.6            
-      - run:
-          name: Get Pip and install Python Dependencies
-          command: |
-            sudo apt-get -y install python3-pip
-            sudo pip3 install matplotlib
+          name: Fix the image weirdness
+        command: |
+          yum -y install https://centos7.iuscommunity.org/ius-release.rpm
+          yum -y install python36u-pip
+          python3.6 -m pip install matplotlib
       - run: 
           name: Run version check
           command: |
