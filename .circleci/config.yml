@@ -9,7 +9,7 @@ jobs:
       - run: 
           name: Fix the image weirdness
           command: |
-            yum -y install python36u-pip
+            docker pull python:3.6
             python3.6 -m pip install matplotlib
       - run: 
           name: Run version check
