@@ -15,5 +15,5 @@ jobs:
         name: Run the simulation
         command: |
           gridlabd --version
-      - store_artifacts:
-        path: /root/project
+          gridlabd --origin
+
