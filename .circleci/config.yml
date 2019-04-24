@@ -23,6 +23,7 @@ jobs:
             gridlabd --version
             git clone https://github.com/dchassin/gridlabd.git
             mv -f config/local.glm gridlabd/models/ieee123/config/
+            more local.glm
             cd gridlabd/models/ieee123
             git checkout aivanova/voltdump_py_fix
             gridlabd model/ieee123.glm
