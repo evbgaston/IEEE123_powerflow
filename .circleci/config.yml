@@ -11,9 +11,7 @@ jobs:
           command: |
             python --version
             yum -y update
-            yum -y install python3.7            
-            yum -y --install /usr/bin/python python /usr/bin/python3.7 1
-            yum -y --set python /usr/bin/python3.7  
+            brew install python3 
             python --version
             python3 --version
       - run: 
