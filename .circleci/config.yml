@@ -9,7 +9,6 @@ jobs:
         name: Fix the image weirdness
         command: |
           yum -y install https://centos7.iuscommunity.org/ius-release.rpm
-          yum -y install python36u-pip
     - run:
         name: Run the simulation
         command: |
