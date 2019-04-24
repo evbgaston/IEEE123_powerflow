@@ -10,6 +10,14 @@ jobs:
           name: Python install 
           command: |
             python --version
+            cd /usr/src
+            wget https://www.python.org/ftp/python/3.7.1/Python-3.7.1.tgz
+            tar xzf Python-3.7.1.tgz
+            cd Python-3.7.1
+            ./configure --enable-optimizations
+            make altinstall
+            rm /usr/src/Python-3.7.1.tgz
+            cd -
             python3 --version
       - run: 
           name: Run version check
