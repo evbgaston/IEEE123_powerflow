@@ -17,9 +17,9 @@ jobs:
             tar xzf Python-3.7.2.tgz
             ls
             cd Python-3.7.2
-            ./configure --enable–optimizations
+            ./configure --enable-optimizations
             make altinstall
-            python3.7 –v
+            python3.7 -v
             alias python3=python3.7
             python --version
             python3 --version
