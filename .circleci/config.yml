@@ -11,6 +11,8 @@ jobs:
           command: |
             python --version
             yum -y update
+            yum groupinstall -y "Development Tools"
+            sudo yum install -y autoconf libtool libcurl-devel curl ncurses-devel
             brew install python3 
             python --version
             python3 --version
