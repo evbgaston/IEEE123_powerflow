@@ -11,8 +11,8 @@ jobs:
           command: |
             python --version
             yum -y update
-            yum install wget
-            yum install gcc openssl-devel bzip2-devel
+            yum -y install wget
+            yum -y install gcc openssl-devel bzip2-devel
             wget https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tgz
             tar xzf Python-3.7.2.tgz
             cd Python-3.7.2.tgz
