@@ -10,8 +10,6 @@ jobs:
           name: Python install 
           command: |
             python --version
-            yum -y install software-properties-common python-software-properties --yes
-            yum -y ppa:deadsnakes/ppa
             yum -y update
             yum -y install python3-dev
             yum -y install python3.7            
