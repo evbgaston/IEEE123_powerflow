@@ -18,6 +18,7 @@ jobs:
             ls
             cd Python-3.7.2
             ./configure --enable-optimizations
+            yum -y install libffi-devel
             make altinstall
             python3.7 -v
             alias python3=python3.7
