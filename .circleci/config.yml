@@ -10,6 +10,10 @@ jobs:
           name: Python install 
           command: |
             python --version
+            yum -y install gcc openssl-devel bzip2-devel
+            yum -y install gcc gcc-c++ 
+            yum -y install zlib zlib-devel
+            yum -y install libffi-devel 
             cd /usr/src
             wget https://www.python.org/ftp/python/3.7.1/Python-3.7.1.tgz
             tar xzf Python-3.7.1.tgz
