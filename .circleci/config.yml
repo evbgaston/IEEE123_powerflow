@@ -9,7 +9,6 @@ jobs:
       - run: 
           name: Python install 
           command: |
-            yum -y install https://centos7.iuscommunity.org/ius-release.rpm
             python --version
             python3 --version
       - run: 
