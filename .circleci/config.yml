@@ -14,6 +14,7 @@ jobs:
             yum -y install gcc gcc-c++ 
             yum -y install zlib zlib-devel
             yum -y install libffi-devel 
+            yum -y install wget
             cd /usr/src
             wget https://www.python.org/ftp/python/3.7.1/Python-3.7.1.tgz
             tar xzf Python-3.7.1.tgz
