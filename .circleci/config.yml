@@ -1,20 +1,17 @@
 # Use the latest 2.1 version of CircleCI pipeline processing engine, see https://circleci.com/docs/2.0/configuration-reference/
-version: 2.1
+version: 2
 jobs: 
   build:
     docker: 
-      - image: gridlabd/slac-master:latest
+      - image: gridlabd/slac-master
     steps: 
       - checkout 
       - run: 
           name: Python install 
           command: |
-            yum update
-            yum install yum-utils
             yum -y install https://centos7.iuscommunity.org/ius-release.rpm
-            yum -y install python36u
             yum -y install python36u-pip
-            python --version
+            python3.6 -m pip install matplotlib
       - run: 
           name: Run version check
           command: |
