@@ -9,21 +9,8 @@ jobs:
       - run: 
           name: Python install 
           command: |
-            python --version
-            yum -y update
-            yum -y install wget
-            yum -y install gcc openssl-devel bzip2-devel
-            wget https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tgz
-            tar xzf Python-3.7.2.tgz
-            ls
-            cd Python-3.7.2
-            ./configure --enable-optimizations
-            yum -y install libffi-devel
-            make altinstall
-            python3.7 -v
-            alias python3=python3.7
-            python --version
             python3 --version
+  
       - run: 
           name: Run version check
           command: |
@@ -37,7 +24,6 @@ jobs:
             mv -f config/local.glm gridlabd/models/ieee123/config/
             more gridlabd/models/ieee123/config/local.glm
             cd gridlabd/models/ieee123
-            git checkout aivanova/voltdump_py_fix
             gridlabd model/ieee123.glm
       - store_artifacts: 
             path: /root/project/gridlabd/models/ieee123/output
